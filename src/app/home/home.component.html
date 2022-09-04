@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Angular Firebase Example</h1>
+            <input class="form-control" type="text" #input placeholder="Enter Message"/>
+            <button class="btn btn-dark" (click)="insert(input)">INSERT</button>
+            <button class="btn btn-dark" (click)="deleteAll()">DELETE ALL</button>
+
+            <div style="display:block;padding:10px;border:1px solid #000;" *ngFor="let d of data">
+                {{ d.payload.val()["message"] }}
+                <hr/>
+                <input class="form-control" type="text" [value]="d.payload.val()['message']" #input2/><button class="btn btn-success" (click)="update(d.key, input2.value)">Update</button>&nbsp; <button class="btn btn-danger" (click)="delete(d.key)">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
