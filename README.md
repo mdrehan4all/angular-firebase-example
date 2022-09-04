@@ -1,3 +1,9 @@
+# Install/Add
+
+ng add @angular/fire
+
+Create a firebase project and copy paste project configuration in environment.ts file
+
 # AngularFirebaseExample
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.1.
